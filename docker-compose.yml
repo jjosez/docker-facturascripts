@@ -12,7 +12,7 @@ services:
       - ./mysql:/var/lib/mysql
 
   facturascripts:
-    image: facturascripts/facturascripts:latest
+    image: juanjoz3/fs:latest
     restart: always
     ports:
       - 80:80
