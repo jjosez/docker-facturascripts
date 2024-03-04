@@ -10,6 +10,11 @@ RUN	apt-get update \
 	&& docker-php-ext-install soap xsl bcmath gd mysqli pdo pdo_mysql pgsql zip \
 	&& apt-get remove -y libxslt1-dev icu-devtools libicu-dev libxml2-dev \
     	&& rm -rf /var/lib/apt/lists/*
+
+RUN 	apt-get -y update \
+	&& apt-get install -y libicu-dev \
+	&& docker-php-ext-configure intl \
+	&& docker-php-ext-install intl
 	
 RUN 	apt-get -y install gcc make autoconf libc-dev pkg-config \
     	&& pecl install timezonedb \
