@@ -7,7 +7,7 @@ RUN	apt-get update \
 	&& a2enmod rewrite \
 	&& service apache2 restart \
 	&& docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
-	&& docker-php-ext-install soap xsl bcmath gd mysqli pdo pdo_mysql pgsql zip \
+	&& docker-php-ext-install bcmath gd mysqli pdo pdo_mysql pgsql zip soap xsl \
 	&& apt-get remove -y libxslt1-dev icu-devtools libicu-dev libxml2-dev \
     	&& rm -rf /var/lib/apt/lists/*
 
