@@ -20,7 +20,7 @@ RUN 	apt-get -y install gcc make autoconf libc-dev pkg-config \
     	&& pecl install timezonedb \
     	&& bash -c "echo extension=timezonedb.so > /usr/local/etc/php/conf.d/docker-php-ext-timezonedb.ini"
 
-ENV 	FS_VERSION 2022.7
+ENV 	FS_VERSION 2024.7
 
 # Download FacturaScripts
 ADD 	https://facturascripts.com/DownloadBuild/1/${FS_VERSION} /tmp/facturascripts.zip
